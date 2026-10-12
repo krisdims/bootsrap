@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portofolio Dimas, mahasiswa Pendidikan Sistem dan Teknologi Informasi yang sedang belajar web dengan Bootstrap."
+    />
+    <title> Portofolio | Dimas Krisna</title>
+
+    <!-- Bootstrap 5 lewat CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font: Bricolage Grotesque (judul) + Source Sans 3 (isi) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS buatan sendiri (selalu setelah Bootstrap supaya bisa menimpa) -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <!-- ScrollSpy: menu di navbar otomatis menyala sesuai bagian yang sedang dilihat -->
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#menuUtama"
+    data-bs-root-margin="-20% 0px -70% 0px"
+    tabindex="0"
+  >
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-zf sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#beranda">Dimas_krisna<span>.</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuUtama"
+          aria-controls="menuUtama"
+          aria-expanded="false"
+          aria-label="Buka menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuUtama">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <header id="beranda" class="hero">
+        <div class="container">
+          <!-- Alert dari latihan sebelumnya, bisa ditutup pengunjung -->
+          <div
+            class="alert alert-warning alert-dismissible fade show mb-4"
+            role="alert"
+          >
+            <strong>Selamat datang!</strong> Situs ini dibuat sebagai latihan
+            Bootstrap 5, jadi isinya akan terus bertambah.
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Tutup"
+            ></button>
+          </div>
+
+          <div class="row align-items-end g-4">
+            <div class="col-lg-7 pb-lg-5 text-center text-lg-start">
+              <h1 class="mb-3">
+                Halo, saya Dimas Krisna. Saya merupakan mahasiswa semester 3 yang sedang belajar membuat web satu
+                halaman yang sederhana.
+              </h1>
+              <p class="lead mb-4">
+                Mahasiswa Pendidikan Sistem dan Teknologi Informasi Universitas Pendidikan Indonesia.
+                Saat ini saya sedang mendalami HTML, CSS, dan Bootstrap.
+              </p>
+              <a href="#proyek" class="btn btn-accent btn-lg me-2 mb-2"
+                >Lihat Proyek</a
+              >
+              <a href="#kontak" class="btn btn-outline-light btn-lg mb-2"
+                >Hubungi Saya</a
+              >
+            </div>
+            <div class="col-lg-5">
+              <div class="arch-wrap">
+                <img
+                  src="IMG_6883.JPG"
+                  class="arch-photo"
+                  alt="Foto berdiri di lorong bangunan tua dengan lengkungan"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ================= TENTANG ================= -->
+      <section id="tentang" class="section">
+        <div class="container">
+          <h2 class="section-title">Tentang Saya</h2>
+          <p class="section-sub">
+            Perkenalan singkat dan perjalanan belajar saya sejauh ini.
+          </p>
+
+          <div class="row g-4">
+            <div class="col-lg-5">
+              <div class="card card-soft h-100">
+                <div class="card-body p-4">
+                  <h3 class="h5 mb-3">Data Singkat</h3>
+                  <dl class="info-list">
+                    <dt>Nama</dt>
+                    <dd>Dimas Krisna Syafa'at Buheri</dd>
+                    <dt>NIM</dt>
+                    <dd>2501711</dd>
+                    <dt>Program Studi</dt>
+                    <dd>Pendidikan Sistem dan Teknologi Informasi</dd>
+                    <dt>Semester</dt>
+                    <dd>3</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <p>
+                Saya masih di tahap awal belajar pemrograman. Cara belajar yang
+                paling cocok buat saya adalah mengamati hasil karya orang lain,
+                menirunya sampai paham, lalu memodifikasinya menjadi versi saya
+                sendiri.
+              </p>
+              <p class="mb-4">
+                Halaman ini adalah hasil dari cara belajar itu. Strukturnya
+                memakai komponen Bootstrap yang sudah saya pelajari di
+                praktikum: navbar, grid, card, progress bar, modal, dan form.
+              </p>
+
+              <h3 class="h5 mb-3">Perjalanan Belajar</h3>
+              <ol class="timeline">
+                <li>
+                  <strong>Dasar HTML dan CSS</strong><br />
+                  Belajar struktur halaman, teks, gambar, dan tampilan dasar.
+                </li>
+                <li>
+                  <strong>Praktikum Bootstrap 5</strong><br />
+                  Mencoba navbar, grid system, card, alert, dan form.
+                </li>
+                <li>
+                  <strong>Portofolio ini</strong><br />
+                  Menggabungkan semuanya menjadi satu halaman yang rapi dan
+                  responsif.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= KEAHLIAN ================= -->
+      <section id="keahlian" class="section pt-0">
+        <div class="container">
+          <h2 class="section-title">Keahlian</h2>
+          <p class="section-sub">
+            Bar di bawah menunjukkan seberapa nyaman saya memakainya sekarang,
+            bukan seberapa ahlinya.
+          </p>
+
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="card card-soft">
+                <div class="card-body p-4">
+                  <!-- Ubah angka width dan aria-valuenow sesuai kemampuanmu -->
+                  <div class="skill">
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-semibold">HTML</span>
+                      <span class="skill-level">sedang belajar</span>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="HTML" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar" style="width: 40%"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill">
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-semibold">CSS</span>
+                      <span class="skill-level">sedang belajar</span>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="CSS" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar" style="width: 40%"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill">
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-semibold">Bootstrap 5</span>
+                      <span class="skill-level">sedang belajar</span>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Bootstrap 5" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar is-orange" style="width: 30%"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill">
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-semibold">JavaScript</span>
+                      <span class="skill-level">sedang belajar</span>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="JavaScript" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar is-orange" style="width: 25%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <h3 class="h5 mb-3">Alat yang saya pakai</h3>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="badge tool-badge">VS Code</span>
+                <span class="badge tool-badge">Git</span>
+                <span class="badge tool-badge">Browser DevTools</span>
+                <span class="badge tool-badge">Bootstrap 5 Docs</span>
+              </div>
+              <h3 class="h5 mb-3">Yang ingin saya pelajari</h3>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge tool-badge">JavaScript lanjutan</span>
+                <span class="badge tool-badge">Responsive design</span>
+                <span class="badge tool-badge">GitHub Pages</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROYEK ================= -->
+      <section id="proyek" class="section pt-0">
+        <div class="container">
+          <h2 class="section-title">Proyek</h2>
+          <p class="section-sub">
+            Klik tombol detail pada kartu untuk melihat penjelasan lengkapnya.
+          </p>
+
+          <div class="row g-4">
+            <!-- Proyek 1 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="card card-soft project-card h-100">
+                <div class="project-head ph-teal" aria-hidden="true">&lt;/&gt;</div>
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title">Portofolio Bootstrap</h3>
+                  <p class="card-text">
+                    Halaman portofolio responsif yang sedang Anda lihat ini.
+                  </p>
+                  <div class="mb-3">
+                    <span class="tag">HTML</span><span class="tag">CSS</span
+                    ><span class="tag">Bootstrap 5</span>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPortofolio"
+                  >
+                    Lihat detail
+                  </button>
+                </div>
+              </article>
+            </div>
+
+           
+            <!-- Proyek 3 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="card card-soft project-card h-100">
+                <div class="project-head ph-dark" aria-hidden="true">{ }</div>
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title">Latihan Komponen Bootstrap</h3>
+                  <p class="card-text">
+                    Kumpulan latihan praktikum: alert, card, form, dan modal.
+                  </p>
+                  <div class="mb-3">
+                    <span class="tag">Alert</span><span class="tag">Form</span
+                    ><span class="tag">Modal</span>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPoster"
+                  >
+                    Lihat detail
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= KONTAK ================= -->
+      <section id="kontak" class="section contact-band">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+              <h2 class="mb-3">Contact?</h2>
+              <p class="text-soft">
+                Punya saran untuk halaman ini, atau ingin belajar bareng?
+                Kirim pesan lewat formulir, nanti terbuka di aplikasi email
+                Anda.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <!-- GANTI emailkamu@contoh.com dengan emailmu yang asli -->
+              <form
+                action="mailto:emailkamu@contoh.com"
+                method="post"
+                enctype="text/plain"
+              >
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Anda" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nama@email.com" required />
+                  </div>
+                  <div class="col-12">
+                    <label for="pesan" class="form-label">Pesan</label>
+                    <textarea class="form-control" id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-accent btn-lg">
+                      Kirim Pesan
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-4 text-center">
+      <div class="container small">
+        &copy; 2026 Dimas Krisna. Dibuat dengan Bootstrap 5.
+      </div>
+    </footer>
+
+    <!-- ================= MODAL DETAIL PROYEK ================= -->
+    <div class="modal fade" id="modalPortofolio" tabindex="-1" aria-labelledby="judulPortofolio" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title h5" id="judulPortofolio">Portofolio Bootstrap</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Tugas praktikum yang saya kembangkan menjadi halaman portofolio
+              lengkap: ada navbar yang menempel di atas, hero dengan foto,
+              bagian keahlian, daftar proyek, dan formulir kontak.
+            </p>
+            <p class="mb-0">
+              <strong>Yang saya pelajari:</strong> mengatur layout dengan grid
+              Bootstrap, menimpa warna bawaan lewat CSS sendiri, dan membuat
+              tampilan tetap rapi di layar HP.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="modalPoster" tabindex="-1" aria-labelledby="judulPoster" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title h5" id="judulPoster">Latihan Komponen Bootstrap</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-0">
+              Di sini saya mencoba satu per satu komponen yang diajarkan di
+              praktikum, lalu memakainya lagi di halaman portofolio ini.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bootstrap (wajib untuk navbar, alert, modal, dan ScrollSpy) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
